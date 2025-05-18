@@ -16,9 +16,9 @@ Este projeto é um catálogo visual de arquivos PSD de alta qualidade organizado
 
 ## 🖼️ Prints do projeto
 
-<div style="display: flex; justify-content: center; gap: 20px;">
-  <img src="./src/assets/desktop.png" alt="desktop" style="width: 300px; height: auto; object-fit: contain;" />
-  <img src="./src/assets/mobile.png" alt="mobile" style="width: 100px; height: auto; object-fit: contain;" />
+<div style="display: flex; justify-content: center; gap: 20px; align-items: center">
+  <img src="./src/assets/desktop.png" alt="desktop" style="width: 500px; height: auto; object-fit: contain;" />
+  <img src="./src/assets/mobile.png" alt="mobile" style="width: 175px; height: auto; object-fit: contain;" />
 </div>
 
 ## 📁 Estrutura de Componentes
