@@ -16,20 +16,32 @@ export const Container = styled.div`
   justify-content: start;
   min-height: 100dvh;
   width: 100%;
-  gap: 20px;
+  gap: 10px;
+
   .logo {
     width: 100%;
     max-width: 300px;
     height: 150px;
     overflow: hidden;
     object-fit: cover;
-    margin-bottom: 10px;
 
     @media (max-width: 768px) {
       width: 100%;
       max-width: 200px;
       height: 100px;
       margin-bottom: -30px;
+    }
+  }
+  .description {
+    padding-inline: 40px;
+    color: #fafafade;
+    max-width: 800px;
+    text-align: center;
+    font-size: 22px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-top: 10px;
     }
   }
 `;
