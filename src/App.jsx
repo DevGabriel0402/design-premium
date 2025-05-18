@@ -1,5 +1,5 @@
 import { Container } from "@/styles/Styles";
-import Logo from "@/assets/logo.png";
+import Logo from "@/assets/Logo.png";
 import { Carrossel } from "@/components/Carrossel";
 
 // Importando as listas separadas por gênero
