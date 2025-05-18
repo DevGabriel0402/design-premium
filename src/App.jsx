@@ -1,4 +1,5 @@
 import { Container } from "@/styles/Styles";
+import { Contato } from "@/components/Contato";
 import Logo from "@/assets/Logo.png";
 import { Carrossel } from "@/components/Carrossel";
 
@@ -8,6 +9,7 @@ import { ListaFunk, ListaGospel, ListaSertanejo, ListaPagode, ListaFestaJunina, 
 function App() {
   return (
     <Container>
+      <Contato message="Alguma sugestão? Fale conosco!" contato="31983272409" />
       <img className="logo" src={Logo} alt="logo" />
       <Carrossel arquivos={ListaFunk} title="PSD Funk" />
       <Carrossel arquivos={ListaGospel} title="PSD Gospel" />

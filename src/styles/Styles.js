@@ -232,3 +232,72 @@ export const Title = styled.h2`
     margin-bottom: 10px;
   }
 `;
+export const ContatoContainer = styled.div`
+  position: fixed;
+  z-index: 999;
+  bottom: 30px;
+  right: 30px;
+  background-color: #4eec69;
+  border-radius: 50px;
+  border: 2px solid #4eec69;
+
+  /* Comportamento base */
+  width: 60px;
+  height: 60px;
+  transition: width 0.4s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+  /* Hover animado */
+  &:hover {
+    width: 280px;
+
+    @media (max-width: 768px) {
+      width: 60px;
+    }
+  }
+
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    gap: 10px;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  p {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    color: #000;
+    pointer-events: none;
+    background: transparent;
+    white-space: nowrap;
+  }
+
+  /* Mostra o texto quando o container é hover */
+  &:hover p {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Em mobile, o texto é sempre escondido */
+  @media (max-width: 768px) {
+    p {
+      display: none;
+    }
+  }
+`;
