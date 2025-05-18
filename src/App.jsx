@@ -9,7 +9,7 @@ import { ListaFunk, ListaGospel, ListaSertanejo, ListaPagode, ListaFestaJunina, 
 function App() {
   return (
     <Container>
-      <Contato message="Alguma sugestão? Fale conosco!" contato="31983272409" />
+      <Contato message="Alguma sugestão? Fale conosco!" contato="31991660594" />
       <img className="logo" src={Logo} alt="logo" />
       <p className="description">Design Premium oferece arquivos PSD de alta qualidade para designers exigentes. Downloads exclusivos, profissionais e modernos.</p>
       <Carrossel arquivos={ListaFunk} title="PSD Funk" />
