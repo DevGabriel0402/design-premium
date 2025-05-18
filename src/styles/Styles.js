@@ -143,6 +143,10 @@ export const Card = styled.div`
       margin-bottom: 10px;
       background: transparent;
       height: 40px;
+
+      &:hover {
+        mask-image: none;
+      }
     }
 
     @media (max-width: 768px) {
