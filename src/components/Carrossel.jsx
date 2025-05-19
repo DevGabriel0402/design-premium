@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { Card, CardContainer, CarouselWrapper, NavButton, Title } from "@/styles/Styles";
 import DownloadIcon from "@/assets/clips.svg";
+import LockIcon from "@/assets/lock.svg";
 import Arrow from "@/assets/arrow.svg";
 
 export const Carrossel = (props) => {
@@ -39,7 +40,7 @@ export const Carrossel = (props) => {
                 <div style={{ cursor: "not-allowed", opacity: 0.5 }}>
                   <img src={item.image} alt={item.genre} />
                   <div className="button">
-                    <img src={DownloadIcon} alt="download" />
+                    <img src={LockIcon} alt="download" />
                     Indisponível
                   </div>
                 </div>
