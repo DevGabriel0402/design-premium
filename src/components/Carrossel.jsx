@@ -3,7 +3,6 @@ import { Card, CardContainer, CarouselWrapper, NavButton, Title } from "@/styles
 import DownloadIcon from "@/assets/clips.svg";
 import LockIcon from "@/assets/lock.svg";
 import Arrow from "@/assets/arrow.svg";
-import { Loading } from "@/components/Loading";
 
 export const Carrossel = (props) => {
   const carouselRef = useRef(null);
@@ -20,15 +19,6 @@ export const Carrossel = (props) => {
     }
   };
 
-  const handleDownloadClick = (item) => {
-    setLoadingId(item.id);
-
-    setTimeout(() => {
-      window.open(item.link, "_blank", "noopener,noreferrer");
-      setLoadingId(null);
-    }, 2000);
-  };
-
   return (
     <>
       <Title>{props.title}</Title>
@@ -40,24 +30,18 @@ export const Carrossel = (props) => {
           {props.arquivos.map((item) => (
             <Card key={item.id}>
               {item.status === "aberto" ? (
-                <div style={{ cursor: loadingId === item.id ? "wait" : "pointer" }} onClick={() => handleDownloadClick(item)}>
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
                   <img src={item.image} alt={item.genre} />
                   <div className="button">
-                    {loadingId === item.id ? (
-                      <Loading />
-                    ) : (
-                      <>
-                        <img src={DownloadIcon} alt="download" />
-                        Baixar aqui
-                      </>
-                    )}
+                    <img src={DownloadIcon} alt="download" />
+                    Baixar aqui
                   </div>
-                </div>
+                </a>
               ) : (
                 <div style={{ cursor: "not-allowed", filter: "grayscale(1)" }}>
                   <img src={item.image} alt={item.genre} />
                   <div className="button">
-                    <img src={LockIcon} alt="lock" />
+                    <img src={LockIcon} alt="download" />
                     Indisponível
                   </div>
                 </div>
