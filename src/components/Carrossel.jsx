@@ -3,7 +3,7 @@ import { Card, CardContainer, CarouselWrapper, NavButton, Title } from "@/styles
 import DownloadIcon from "@/assets/clips.svg";
 import LockIcon from "@/assets/lock.svg";
 import Arrow from "@/assets/arrow.svg";
-import { Laoding } from "./Loading";
+import { Loading } from "@/components/Loading";
 
 export const Carrossel = (props) => {
   const carouselRef = useRef(null);
@@ -44,7 +44,7 @@ export const Carrossel = (props) => {
                   <img src={item.image} alt={item.genre} />
                   <div className="button">
                     {loadingId === item.id ? (
-                      <Laoding />
+                      <Loading />
                     ) : (
                       <>
                         <img src={DownloadIcon} alt="download" />
