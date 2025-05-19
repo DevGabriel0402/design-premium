@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Card, CardContainer, CarouselWrapper, NavButton, Title } from "@/styles/Styles";
 import DownloadIcon from "@/assets/clips.svg";
 import LockIcon from "@/assets/lock.svg";
@@ -6,7 +6,6 @@ import Arrow from "@/assets/arrow.svg";
 
 export const Carrossel = (props) => {
   const carouselRef = useRef(null);
-  const [loadingId, setLoadingId] = useState(null);
 
   const scroll = (direction) => {
     const container = carouselRef.current;
