@@ -9,6 +9,21 @@ const fadeIn = keyframes`
   }
 `;
 
+export const Loading = styled.div`
+  width: 24px;
+  height: 24px;
+  border: 3px solid #ffffff80;
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  animation: spin 0.5s linear infinite;
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;

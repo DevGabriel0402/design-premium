@@ -1,21 +1,38 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Card, CardContainer, CarouselWrapper, NavButton, Title } from "@/styles/Styles";
 import DownloadIcon from "@/assets/clips.svg";
 import LockIcon from "@/assets/lock.svg";
 import Arrow from "@/assets/arrow.svg";
+import { Laoding } from "./Loading";
 
 export const Carrossel = (props) => {
   const carouselRef = useRef(null);
+  const [loadingId, setLoadingId] = useState(null);
 
   const scroll = (direction) => {
     const container = carouselRef.current;
-    const scrollAmount = 270;
+    const card = container?.querySelector("div");
+    if (!card || !container) return;
 
-    if (direction === "left") {
-      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    } else {
-      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
+    const cardStyles = window.getComputedStyle(card);
+    const cardWidth = card.offsetWidth;
+    const gap = parseInt(cardStyles.marginRight) || 20; // fallback para gap de 20px
+
+    const scrollAmount = cardWidth + gap;
+
+    container.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
+
+  const handleDownloadClick = (item) => {
+    setLoadingId(item.id);
+
+    setTimeout(() => {
+      window.open(item.link, "_blank", "noopener,noreferrer");
+      setLoadingId(null);
+    }, 2000); // 2 segundos de feedback visual
   };
 
   return (
@@ -29,18 +46,24 @@ export const Carrossel = (props) => {
           {props.arquivos.map((item) => (
             <Card key={item.id}>
               {item.status === "aberto" ? (
-                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <div style={{ cursor: loadingId === item.id ? "wait" : "pointer" }} onClick={() => handleDownloadClick(item)}>
                   <img src={item.image} alt={item.genre} />
                   <div className="button">
-                    <img src={DownloadIcon} alt="download" />
-                    Baixar aqui
+                    {loadingId === item.id ? (
+                      <Laoding />
+                    ) : (
+                      <>
+                        <img src={DownloadIcon} alt="download" />
+                        Baixar aqui
+                      </>
+                    )}
                   </div>
-                </a>
+                </div>
               ) : (
                 <div style={{ cursor: "not-allowed", filter: "grayscale(1)" }}>
                   <img src={item.image} alt={item.genre} />
                   <div className="button">
-                    <img src={LockIcon} alt="download" />
+                    <img src={LockIcon} alt="lock" />
                     Indisponível
                   </div>
                 </div>
