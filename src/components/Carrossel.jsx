@@ -11,19 +11,13 @@ export const Carrossel = (props) => {
 
   const scroll = (direction) => {
     const container = carouselRef.current;
-    const card = container?.querySelector("div");
-    if (!card || !container) return;
+    const scrollAmount = 270;
 
-    const cardStyles = window.getComputedStyle(card);
-    const cardWidth = card.offsetWidth;
-    const gap = parseInt(cardStyles.marginRight) || 20; // fallback para gap de 20px
-
-    const scrollAmount = cardWidth + gap;
-
-    container.scrollBy({
-      left: direction === "left" ? -scrollAmount : scrollAmount,
-      behavior: "smooth",
-    });
+    if (direction === "left") {
+      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
   };
 
   const handleDownloadClick = (item) => {
