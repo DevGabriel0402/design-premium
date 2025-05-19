@@ -444,3 +444,70 @@ export const ListaEletronica = [
     status: "fechado",
   },
 ];
+
+export const ListaPacks = [
+  {
+    id: 1,
+    image:
+      "https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=400/7hSbDx5BmtUuivL/course_thumbnails_0062ab19-c1ae-448a-afdd-8e89d75c4b65_dc73fa1cc9c44e43b51d4803b3cea376.png",
+    link: "https://drive.google.com/uc?export=download&id=1vDwJsNGA_JmhArUMMT6u1SKEW5OWrNse",
+    genre: "Packs",
+    status: "Fechado",
+  },
+  {
+    id: 2,
+    image:
+      "https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=400/7hSbDx5BmtUuivL/course_thumbnails_4b733f6e-6f20-47b8-bf71-b8cf9367c98c_0bdda8ca22944b2b80a05317b14da38f.png",
+    link: "https://drive.google.com/uc?export=download&id=1tn1SfvzwflLqLYCkLNoYGcdvTGDiwij3",
+    genre: "Packs",
+    status: "Fechado",
+  },
+  {
+    id: 3,
+    image:
+      "https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=400/7hSbDx5BmtUuivL/course_thumbnails_eadbfa84-b68d-4e47-8861-173b048ccf29_2efbe22cbadc4c47b0d4eb7aab9d5585.png",
+    link: "https://drive.google.com/uc?export=download&id=1nK47DQgOaPLHRrb2XpTI0GVsxl4YnMJx",
+    genre: "Packs",
+    status: "Fechado",
+  },
+  {
+    id: 4,
+    image:
+      "https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=400/7hSbDx5BmtUuivL/course_thumbnails_cf575408-61f7-4625-9ade-25aa3989af73_3f01210b64e84aaf9eea683328f66eb7.png",
+    link: "https://drive.google.com/uc?export=download&id=1l3JworniOTCSTZn-i0TJBkzpAx2kAOZs",
+    genre: "Packs",
+    status: "Fechado",
+  },
+  {
+    id: 5,
+    image:
+      "https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=400/7hSbDx5BmtUuivL/course_thumbnails_f94da688-30a0-421c-893b-03a148fb7193_78c260cbacfd4aafa570723ea6328072.png",
+    link: "https://drive.google.com/uc?export=download&id=1f6x5nQuvWetSVPpiRLkkVIgmDbXG42SC",
+    genre: "Packs",
+    status: "Fechado",
+  },
+  {
+    id: 6,
+    image:
+      "https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=400/7hSbDx5BmtUuivL/course_thumbnails_58ad409d-5499-4d62-9d1d-d66d866f4888_6ba1008914ef4b5b8274f038172af35f.png",
+    link: "https://drive.google.com/uc?export=download&id=1RIblqHERu8hDpq_6obp_2RDtksPwwg14",
+    genre: "Packs",
+    status: "Fechado",
+  },
+  {
+    id: 7,
+    image:
+      "https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=400/7hSbDx5BmtUuivL/course_thumbnails_d0e49434-0e1f-423f-8869-a6580bff584a_1795211963a948b9bef5ccdd80b9c22a.png",
+    link: "https://drive.google.com/uc?export=download&id=1Gkcpd_KUhbAQM_QsIa5mz6BZrQwkqBAY",
+    genre: "Packs",
+    status: "Fechado",
+  },
+  {
+    id: 8,
+    image:
+      "https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=400/7hSbDx5BmtUuivL/course_thumbnails_8cbe7b44-2213-4e7d-b8b2-a2894f161e90_fed48550ba5043d084a05e0d15610814.png",
+    link: "https://drive.google.com/uc?export=download&id=1ELgRfFosaO-SU37WdiStRPJXBHWlbF2r",
+    genre: "Packs",
+    status: "Fechado",
+  },
+];

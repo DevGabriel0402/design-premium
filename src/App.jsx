@@ -4,7 +4,7 @@ import Logo from "@/assets/Logo.png";
 import { Carrossel } from "@/components/Carrossel";
 
 // Importando as listas separadas por gênero
-import { ListaFunk, ListaGospel, ListaSertanejo, ListaPagode, ListaFestaJunina, ListaRock, ListaNamorados, ListaEletronica } from "./Arquivos/Index";
+import { ListaFunk, ListaGospel, ListaSertanejo, ListaPagode, ListaFestaJunina, ListaRock, ListaNamorados, ListaEletronica, ListaPacks } from "./Arquivos/Index";
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
       <Carrossel arquivos={ListaRock} title="PSD Rock" />
       <Carrossel arquivos={ListaNamorados} title="PSD Namorados" />
       <Carrossel arquivos={ListaEletronica} title="PSD Eletrônica" />
+      <Carrossel arquivos={ListaPacks} title="PSD Packs" />
     </Container>
   );
 }

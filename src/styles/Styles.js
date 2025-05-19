@@ -67,7 +67,7 @@ export const CarouselWrapper = styled.div`
     width: 100%;
     max-width: 1140px;
     pointer-events: none;
-    background-image: linear-gradient(to left, #0b0b0b 2%, transparent 20%, transparent 80%, #0b0b0b 98%);
+    background-image: linear-gradient(to left, #0b0b0b 0%, transparent 20%, transparent 80%, #0b0b0b 100%);
   }
 `;
 
