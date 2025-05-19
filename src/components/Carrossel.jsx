@@ -24,7 +24,7 @@ export const Carrossel = (props) => {
     setLoadingId(item.id);
 
     setTimeout(() => {
-      window.open(item.link, "_blank", "noopener,noreferrer");
+      window.open(item.link, "noopener,noreferrer");
       setLoadingId(null);
     }, 2000);
   };
