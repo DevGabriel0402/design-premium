@@ -9,13 +9,19 @@ export const Carrossel = (props) => {
 
   const scroll = (direction) => {
     const container = carouselRef.current;
-    const scrollAmount = 270;
+    const card = container?.querySelector("div");
+    if (!card || !container) return;
 
-    if (direction === "left") {
-      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    } else {
-      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
+    const cardStyles = window.getComputedStyle(card);
+    const cardWidth = card.offsetWidth;
+    const gap = parseInt(cardStyles.marginRight) || 20; // fallback se não usar `gap`
+
+    const scrollAmount = cardWidth + gap;
+
+    container.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
   };
 
   return (
