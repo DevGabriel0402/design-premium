@@ -37,7 +37,7 @@ export const Carrossel = (props) => {
                   </div>
                 </a>
               ) : (
-                <div style={{ cursor: "not-allowed", opacity: 0.5 }}>
+                <div style={{ cursor: "not-allowed", filter: "grayscale(1)" }}>
                   <img src={item.image} alt={item.genre} />
                   <div className="button">
                     <img src={LockIcon} alt="download" />
