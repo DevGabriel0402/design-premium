@@ -16,6 +16,7 @@ export const Carrossel = (props) => {
       container.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
+
   return (
     <>
       <Title>{props.title}</Title>
@@ -26,13 +27,23 @@ export const Carrossel = (props) => {
         <CardContainer ref={carouselRef}>
           {props.arquivos.map((item) => (
             <Card key={item.id}>
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <img src={item.image} alt={item.genre} />
-                <div className="button">
-                  <img src={DownloadIcon} alt="download" />
-                  Baixar aqui
+              {item.status === "aberto" ? (
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <img src={item.image} alt={item.genre} />
+                  <div className="button">
+                    <img src={DownloadIcon} alt="download" />
+                    Baixar aqui
+                  </div>
+                </a>
+              ) : (
+                <div style={{ cursor: "not-allowed", opacity: 0.5 }}>
+                  <img src={item.image} alt={item.genre} />
+                  <div className="button">
+                    <img src={DownloadIcon} alt="download" />
+                    Indisponível
+                  </div>
                 </div>
-              </a>
+              )}
             </Card>
           ))}
         </CardContainer>
