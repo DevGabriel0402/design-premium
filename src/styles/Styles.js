@@ -108,6 +108,7 @@ export const Card = styled.div`
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
+  border: 1px solid #fafafa10;
 
   border-radius: 8px;
   color: #fafafa;
