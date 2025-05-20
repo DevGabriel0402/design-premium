@@ -71,19 +71,6 @@ export const CarouselWrapper = styled.div`
   max-width: 1140px;
   padding-inline: 30px;
   background-color: #0b0b0b;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    z-index: 10;
-    width: 100%;
-    max-width: 1140px;
-    pointer-events: none;
-    background-image: linear-gradient(to left, #0b0b0b 0%, transparent 20%, transparent 80%, #0b0b0b 100%);
-  }
 `;
 
 // MODIFICADO: container de cards para scroll horizontal
@@ -92,7 +79,7 @@ export const CardContainer = styled.div`
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 20px;
+  gap: 18px;
   padding-block: 10px;
 
   &::-webkit-scrollbar {
